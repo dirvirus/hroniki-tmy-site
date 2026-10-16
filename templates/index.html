@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ХРОНИКИ ТЬМЫ — Скачать игру</title>
+<meta name="description" content="Хроники Тьмы — выживалка с волнами, 5 классами и боссами. Скачай бесплатно.">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<canvas id="bg-canvas"></canvas>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#" class="logo">
+      <span class="logo-icon">⚔</span>
+      <span>ХРОНИКИ ТЬМЫ</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">Об игре</a>
+      <a href="#features">Особенности</a>
+      <a href="#download" class="nav-btn">Скачать</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">ХРОНИКИ ТЬМЫ</h1>
+    <p class="hero-subtitle">Выживи в бесконечных волнах тьмы.<br>Стань легендой Альдорана.</p>
+    <div class="hero-buttons">
+      <a href="/download" class="btn btn-primary">
+        <span class="btn-icon">⬇</span> СКАЧАТЬ ИГРУ
+      </a>
+      <a href="#about" class="btn btn-secondary">УЗНАТЬ БОЛЬШЕ</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-value" id="downloads-count">{{ downloads }}</div>
+        <div class="stat-label">скачиваний</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">5</div>
+        <div class="stat-label">классов</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">∞</div>
+        <div class="stat-label">волн</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value">v{{ version }}</div>
+        <div class="stat-label">версия</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">↓</div>
+</header>
+
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="section-title">◆ ОБ ИГРЕ ◆</h2>
+    <div class="about-text">
+      <p><strong>Хроники Тьмы</strong> — динамичная выживалка, где ты сражаешься с бесконечными волнами монстров, прокачиваешь героя и открываешь новые умения.</p>
+      <p>Выбери свой класс: <em>Воин</em>, <em>Лучник</em>, <em>Маг</em>, <em>Некромант</em> или <em>Друид</em>. Каждый класс имеет 8 уникальных умений, которые можно улучшать до 10 уровня.</p>
+      <p>Каждые 5 волн появляется босс. Побеждай их, чтобы получить редкое оружие и золото. Купи лошадь, найми питомца, войди в портал в пустыню — и найди Уробороса!</p>
+    </div>
+  </div>
+</section>
+
+<section id="features" class="section section-dark">
+  <div class="container">
+    <h2 class="section-title">◆ ОСОБЕННОСТИ ◆</h2>
+    <div class="features-grid">
+      <div class="feature"><div class="feature-icon">⚔</div><h3>5 классов</h3><p>Воин, Лучник, Маг, Некромант, Друид</p></div>
+      <div class="feature"><div class="feature-icon">🌟</div><h3>Умения до 10 уровня</h3><p>Изучай новые, качай существующие</p></div>
+      <div class="feature"><div class="feature-icon">👑</div><h3>Боссы с фазами</h3><p>6+ уникальных боссов</p></div>
+      <div class="feature"><div class="feature-icon">🌵</div><h3>Пустыня и портал</h3><p>Сражайся с мумиями, найди Уробороса</p></div>
+      <div class="feature"><div class="feature-icon">🐻</div><h3>Питомцы друида</h3><p>Медведь, рысь или ворон</p></div>
+      <div class="feature"><div class="feature-icon">🎨</div><h3>Скины</h3><p>Меняй внешний вид персонажа и лошади</p></div>
+      <div class="feature"><div class="feature-icon">📜</div><h3>Квесты</h3><p>Более 20 квестов</p></div>
+      <div class="feature"><div class="feature-icon">💾</div><h3>3 слота сохранений</h3><p>Автосохранение каждые 30 секунд</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="download" class="section download-section">
+  <div class="container">
+    <div class="download-box">
+      <h2 class="download-title">ГОТОВ СРАЗИТЬСЯ С ТЬМОЙ?</h2>
+      <p class="download-subtitle">Скачай последнюю версию <strong>v{{ version }}</strong> и начни своё приключение прямо сейчас.</p>
+      <a href="/download" class="btn btn-download">
+        <span class="btn-icon">⬇</span> СКАЧАТЬ ХРОНИКИ ТЬМЫ
+        <span class="btn-size">.exe</span>
+      </a>
+      <div class="download-info">
+        <span>📦 Размер: ~50 MB</span>
+        <span>✅ Бесплатно</span>
+        <span>💻 Windows 10/11</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container">
+    <h2 class="section-title">◆ ОБРАТНАЯ СВЯЗЬ ◆</h2>
+    <p style="text-align:center;color:#9a96a8;margin-bottom:30px;">Нашёл баг или хочешь предложить идею? Напиши мне!</p>
+    <form class="feedback-form" id="feedback-form">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Твоё имя" required maxlength="50">
+        <input type="email" name="email" placeholder="Email (необязательно)" maxlength="100">
+      </div>
+      <textarea name="message" placeholder="Сообщение..." required maxlength="1000" rows="6"></textarea>
+      <div class="form-bottom">
+        <button type="submit" class="btn btn-primary">Отправить</button>
+        <div class="form-status" id="form-status"></div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Хроники Тьмы. Главный разработчик: <strong>DirVirus</strong>.</p>
+    <p>Спасибо, что поддерживаете меня, играя в мою игру!</p>
+  </div>
+</footer>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
